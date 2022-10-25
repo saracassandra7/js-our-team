@@ -39,12 +39,19 @@ const team = [
   }
 ];
 
+
 /***MILESTONE 1:**
 Stampare su console le informazioni di nome, ruolo e la stringa della foto*/
 
+let lista = document.querySelector('.list-group');
+
 for(let member of team){
   const output = `${member.nome}, ${member.ruolo}, ${member.foto}`;
-  console.log(output);
   
-  console.log(member);
+  console.log(output);
+
+  /***MILESTONE 2:**
+  Stampare le stesse informazioni su DOM sotto forma di stringhe*/
+  lista.innerHTML += `<li class="list-group-item"> <strong>Nome:</strong> ${member.nome}, <strong>Ruolo:</strong> ${member.ruolo}, <strong>Url foto:</strong> ${member.foto}</li>`
 }
+
